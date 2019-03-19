@@ -1,0 +1,33 @@
+defaults: &defaults
+ adapter: postgresql
+ encoding: unicode
+ reconnect: true
+ pool: 8
+
+development:
+ host: <%= ENV['DBDEV_HOSTNAME'] %>
+ port: <%= ENV['DBDEV_PORT'] %>
+ database: <%= ENV['DBDEV_DATABASE'] %>
+ username: <%= ENV['DBDEV_USERNAME'] %>
+ password: <%= ENV['DBDEV_PASSWORD'] %>
+ <<: *defaults
+
+production:
+ host: <%= ENV['DB_HOSTNAME'] %>
+ port: <%= ENV['DB_PORT'] %>
+ database: <%= ENV['DB_DATABASE'] %>
+ username: <%= ENV['DB_USERNAME'] %>
+ password: <%= ENV['DB_PASSWORD'] %>
+ <<: *defaults
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+
+test:
+ host: <%= ENV['DBTEST_HOSTNAME'] %>
+ port: <%= ENV['DBTEST_PORT'] %>
+ database: <%= ENV['DBTEST_DATABASE'] %>
+ username: <%= ENV['DBTEST_USERNAME'] %>
+ password: <%= ENV['DBTEST_PASSWORD'] %>
+ <<: *defaults
