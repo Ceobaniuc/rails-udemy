@@ -55,3 +55,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'pry-rails'
+gem 'friendly_id', '~> 5.1.0'
