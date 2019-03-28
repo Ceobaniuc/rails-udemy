@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -43,7 +43,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to @blog, notice: 'Seu blog foi atualizado com sucesso.' }
 
       else
         format.html { render :edit }
@@ -60,6 +60,15 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: 'Seu blog foi deletado com sucesso!' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_status
+    if @blog.draft?
+      @blog.published!
+    else
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: "Post status has been updated"
   end
 
   private
