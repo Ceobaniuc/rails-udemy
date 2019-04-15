@@ -53,7 +53,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
 
     # Destroy/delete the record
-    @portfolio_item.destroy
+    @portfolio_item.delete
 
     # Redirect
     respond_to do |format|
