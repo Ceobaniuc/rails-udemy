@@ -53,12 +53,11 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
 
     # Destroy/delete the record
-    @portfolio_item.delete
+    @portfolio_item.destroy
 
     # Redirect
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
-      format.json { head :no_content }
     end
   end
 
