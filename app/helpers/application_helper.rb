@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    DevcampViewTool::Renderer.copyright 'Pedro Ceobaniuc', 'Todos os direitos reservados'
+    DireitosAutorais::Renderer.copyright 'Pedro Ceobaniuc', 'Todos os direitos reservados'
   end
 end
