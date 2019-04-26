@@ -14,7 +14,7 @@
 
           <div class="form-group">
             <%= f.label :name %><br />
-            <%= f.text_field :name, class: "form-control", placeholder: "Nome" %>
+            <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
           </div>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -23,7 +23,7 @@
 
           <div class="form-group">
             <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Senha" %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
             <% if @minimum_password_length %>
               <br />
               <em><%= @minimum_password_length %> characters minimum</em>
@@ -32,12 +32,12 @@
 
           <div class="form-group">
             <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
           </div>
 
           <div class="form-group">
             <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+            <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
           </div>
 
           <div class="form-group">
