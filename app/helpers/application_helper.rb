@@ -29,5 +29,6 @@ nav_links = <<NAV
 NAV
 
 nav_links.html_safe
+
   end
 end
