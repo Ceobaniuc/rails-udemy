@@ -12,7 +12,15 @@
   </head>
 
   <body>
-          <div id="background"></div>
+    <%= image_tag(
+        'quarto.gif',
+        id: 'background',
+        autoplay: true,
+        loop: true,
+        muted: true,
+        poster: 'fundo.png'
+    )
+    %>
 
           <%= render "shared/application_nav" %>
 
