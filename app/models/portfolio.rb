@@ -26,3 +26,4 @@ class Portfolio < ApplicationRecord
   end
 
 end
+#gambiarra commit
