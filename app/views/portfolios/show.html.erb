@@ -4,7 +4,7 @@
       <% if @portfolio_item.main_image.attached? %>
         <%= image_tag @portfolio_item.main_image, width: "100%" %>
       <% else %>
-        <%= image_tag (image_generator(height: '350', width: '200')) %>
+        <%= image_tag (image_generator(height: '600', width: '400')) %>
       <% end %>
     </div>
 
