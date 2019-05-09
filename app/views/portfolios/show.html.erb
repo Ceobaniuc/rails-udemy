@@ -1,7 +1,11 @@
 <div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag portfolio_img(@portfolio_item.main_image.attached?, 'main'), width: "100%" unless @portfolio_item.main_image.attached? %>
+      <% if @portfolio_item.main_image.attached? %>
+        <%= image_tag @portfolio_item.main_image, width: "100%" %>
+      <% else %>
+        <%= image_tag(image_generator (height: '600', width: '400')) %>
+      <% end %>
     </div>
 
     <div class="col-md-5">
