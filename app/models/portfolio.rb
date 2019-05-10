@@ -3,7 +3,9 @@ class Portfolio < ApplicationRecord
   has_one_attached :main_image
 
   has_many :technologies, dependent: :destroy
-  accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
+  accepts_nested_attributes_for :technologies,
+                                 allow_destroy: true,
+                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   includes Placeholder
   validates_presence_of :title, :body
