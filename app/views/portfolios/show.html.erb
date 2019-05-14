@@ -1,6 +1,6 @@
 <div class="container portfolio-container">
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-7 ">
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-7 ">
       <% if @portfolio_item.main_image.attached? %>
         <%= image_tag @portfolio_item.main_image, width: "100%" %>
       <% else %>
@@ -8,7 +8,7 @@
       <% end %>
     </div>
 
-    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-5 ">
+    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-5 ">
       <h1><%= @portfolio_item.title %></h1>
 
       <hr>
