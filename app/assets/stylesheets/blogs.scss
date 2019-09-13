@@ -184,10 +184,18 @@ h6, .h6 {
  }
 
  .comment-attribution {
-   font-size: .8em;
-   font-style: italic;
+   opacity: inherit;
+   font-size: .7em;
+   font-style: normal;
  }
 
  .comment-name {
+   padding-left: 0.4cm;
+   font-size: .8em;
+   font-style: normal;
    font-weight: 700;
+ }
+
+ .comment-spacing {
+   padding-left: 0.5cm;
  }
