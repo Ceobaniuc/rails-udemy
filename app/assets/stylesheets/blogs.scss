@@ -199,3 +199,12 @@ h6, .h6 {
  .comment-spacing {
    padding-left: 0.5cm;
  }
+
+ .breadcrumb-item.active{
+    margin-right: auto;
+ }
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}

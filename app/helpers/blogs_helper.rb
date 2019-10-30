@@ -22,4 +22,12 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
+
+  def blog_status blog
+    if blog.draft?
+      "square-o"
+    else
+      "check-square-o"
+    end
+  end
 end
