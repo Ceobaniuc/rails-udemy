@@ -1,15 +1,29 @@
 <div class="col-sm-8 blog-main">
 
-<h2><%= @blog.title %></h2>
+  <h2><%= @blog.title %></h2>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <%= link_to "Home", root_path, class: 'breadcrumb-item'%>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item'%>
 
-<p>
-  <%= @blog.body %>
-</p>
+    <span class="breadcrumb-item active"><%= @blog.title %></span>
 
-<%= render 'comments/comment_form' %>
+    <span class="float-right">
+      <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
+      <%= link_to fa_icon('trash'), @blog, method: :delete, data: {confirm: 'Você tem certeza que deseja excluir este post?'} if logged_in?(:site_admin) %>
+    </span>
+  </nav>
 
-<%= render @blog.comments %>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+
+  <p>
+    <%= markdown @blog.body %>
+  </p>
+
+  <%= render 'comments/comment_form' %>
+
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
 
 </div>

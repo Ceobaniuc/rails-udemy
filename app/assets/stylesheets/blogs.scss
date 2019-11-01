@@ -159,6 +159,7 @@ h6, .h6 {
  */
 
 .blog-footer {
+  margin-top: 20px;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -177,3 +178,37 @@ h6, .h6 {
  .social-links li {
    font-size: 2.5em;
  }
+
+ .comment-card > .card {
+   margin-top: 15px;
+ }
+
+ .comment-attribution {
+   opacity: inherit;
+   font-size: .7em;
+   font-style: normal;
+ }
+
+ .comment-name {
+   padding-left: 0.4cm;
+   font-size: .8em;
+   font-style: normal;
+   font-weight: 700;
+ }
+
+ .comment-spacing {
+   padding-left: 0.5cm;
+ }
+
+ .breadcrumb-item.active{
+    margin-right: auto;
+ }
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
