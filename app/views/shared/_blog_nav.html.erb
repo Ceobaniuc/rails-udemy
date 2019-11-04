@@ -1,16 +1,15 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded blog-nav">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to "Pedro Ceobaniuc", root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="container">
-    <%= link_to "Pedro Ceobaniuc", root_path, class: 'navbar-brand' %>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
         <%= nav_helper 'nav-link', 'li' %>
         <%= login_helper 'nav-link' %>
-      </ul>
-    </div>
+      </li>
+    </ul>
   </div>
 </nav>

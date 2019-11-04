@@ -8,10 +8,10 @@ module ApplicationHelper
        link_to 'logout', destroy_user_session_path, method: :delete, class: style
      end
   end
-  def source_helper(layout_name)
+  def source_helper(styles)
     if session[:source]
-      greeting = "Thanks for visiting me from  #{session[:source]} and you are on the #{layout_name} layout"
-      content_tag(:p, greeting, class: "source-greeting")
+      greeting = "Obrigado por me visitar pelo #{session[:source]}, por favor, sinta-se a vontade para entrar #{ link_to 'contato', contact_path } caso queira trabalhar junto. "
+      content_tag(:div, greeting.html_safe, class: styles)
     end
   end
 
