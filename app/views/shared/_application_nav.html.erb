@@ -4,7 +4,12 @@
       <h3 class="masthead-brand">Pedro Ceobaniuc</h3>
       <nav class="nav nav-masthead app-nav">
         <%= nav_helper 'nav-link', 'span' %>
-        <%= login_helper 'nav-link' %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown"></a>
+          <div class="dropdown-menu">
+            <%= login_helper 'dropdown-item' %>
+          </div>
+        </li>
       </nav>
     </div>
   </header>

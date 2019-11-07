@@ -5,7 +5,8 @@ module ApplicationHelper
        " ".html_safe +
        (link_to 'login', new_user_session_path, class: style)
      else
-       link_to 'logout', destroy_user_session_path, method: :delete, class: style
+       (link_to 'logout', destroy_user_session_path, method: :delete, class: style) +
+       (link_to 'edit profile', edit_user_registration_path, class: style)
      end
   end
   def source_helper(styles)
@@ -34,16 +35,16 @@ module ApplicationHelper
         title: 'Contact'
       },
       {
+        url: tech_news_path,
+        title: 'Tech News'
+      },
+      {
         url: blogs_path,
         title: 'Blogs'
       },
       {
         url: portfolios_path,
         title: 'Portfolio'
-      },
-      {
-        url: tech_news_path,
-        title: 'Tech News'
       }
     ]
   end
