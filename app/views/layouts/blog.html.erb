@@ -10,6 +10,8 @@
 
    <meta name="keywords" content= <% @seo_keywords %>/>
 
+   <%= favicon_link_tag 'favicons/favicon.png' %>
+
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -32,7 +34,7 @@
         <%= render 'shared/blog_footer' %>
 
         <%= alerts %>
-        
+
     </div>
    <!-- End of container and row element -->
 
