@@ -39,7 +39,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 50em;
 }
 
 
@@ -158,4 +158,31 @@ body {
 
 .tech-news > .card{
   padding: 30px;
+}
+
+.app-card-container{
+  color: black;
+  text-align: left
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.app-card-container-map{
+  color: black;
+  text-align: left
+}
+
+.app-card-container-map > .card {
+  padding: 40px;
+  width: 60rem;
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
+
+.app-card-container-map a {
+  color: blue;
 }
