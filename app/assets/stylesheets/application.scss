@@ -139,7 +139,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('fundo.png') no-repeat;
+  background: image-url('quarto.gif') no-repeat;
   background-size: cover;
 }
 
@@ -175,8 +175,8 @@ body {
 }
 
 .app-card-container-map > .card {
-  padding: 40px;
-  width: 60rem;
+  padding: 30px;
+  padding-right: 12.0em;
 }
 
 .profile-img {
@@ -185,4 +185,8 @@ body {
 
 .app-card-container-map a {
   color: blue;
+}
+
+.app-card-container-map hr {
+  width: 125%;
 }
