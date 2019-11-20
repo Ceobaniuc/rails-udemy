@@ -6,6 +6,7 @@ module ApplicationHelper
        (link_to 'login', new_user_session_path, class: style)
      else
        (link_to 'logout', destroy_user_session_path, method: :delete, class: style) +
+       " ".html_safe +
        (link_to 'edit profile', edit_user_registration_path, class: style)
      end
   end
