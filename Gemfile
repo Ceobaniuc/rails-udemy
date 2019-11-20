@@ -57,7 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.2'
 gem 'pry-rails'
 gem 'friendly_id', '~> 5.1.0'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'direitos_autorais', '~> 0.1.1'
