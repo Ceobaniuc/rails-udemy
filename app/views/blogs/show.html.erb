@@ -14,8 +14,6 @@
     </span>
   </nav>
 
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-
   <p>
     <%= markdown @blog.body %>
   </p>
